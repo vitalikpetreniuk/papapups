@@ -4,16 +4,44 @@ $(function () {
             slidesToShow: 1,
             centerMode: true,
             centerPadding: '430px',
-            // autoplay: true,
+            autoplay: true,
             autoplaySpeed: 1600,
             infinite: true,
-            dots: true
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 1620,
+                    settings: {
+                        centerPadding: '300px'
+                    }
+                },
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        centerPadding: '150px'
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        centerPadding: '80px'
+                    }
+                },
+                {
+                    breakpoint: 567,
+                    settings: {
+                        arrows: false,
+                        centerMode: false,
+                        centerPadding: '0'
+                    }
+                }
+            ]
         });
     }
     if($('.comments-slider').length){
         $('.comments-slider').slick({
             slidesToShow: 1,
-            // autoplay: true,
+            autoplay: true,
             autoplaySpeed: 1600,
             infinite: true
         });
@@ -36,23 +64,23 @@ $(function () {
 
     $(".paralax").paroller({ factor: '0.3', type: 'foreground', direction: 'horizontal' });
 
-    $(function() {
-        ($('.minus')).click(function() {
-            var q = $('.num');
-            var data = $(q).val();
-            if(data > 0) {
-                $(q).val(parseInt(data) - 1);
-            }
-            return false
-        });
-        ($('.plus')).click(function() {
-            var q = $('.num');
-            var data = $(q).val();
-            $(q).val(parseInt(data) + 1);
-            return false
-        });
+    $('.minus').click(function() {
+        var q = $('.num');
+        var data = $(q).val();
+        if(data > 0) {
+            $(q).val(parseInt(data) - 1);
+        }
+        return false
     });
-    $(function() {
-        $('input, select').styler();
+    $('.plus').click(function() {
+        var q = $('.num');
+        var data = $(q).val();
+        $(q).val(parseInt(data) + 1);
+        return false
     });
+
+    $('input, select').styler();
+
+
+    AOS.init();
 });
