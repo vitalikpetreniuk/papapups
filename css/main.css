@@ -437,6 +437,7 @@ section {
 .btn-more {
   background: transparent url("../images/arrow_more.png") no-repeat 90% center;
   border: 2px solid transparent;
+  border-radius: 0;
   color: #788686;
   padding: 0 40px;
   line-height: 60px;

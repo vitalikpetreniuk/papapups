@@ -8,7 +8,6 @@
     left: -105px; }
   .happy-slider .slick-arrow {
     top: 37%; } }
-
 @media only screen and (max-width: 1199px) {
   .happy-slider .slick-arrow.slick-next {
     right: 5%; }
@@ -414,7 +413,7 @@
     margin-left: 0;
     line-height: 1.2; }
   .product-descr::before {
-    top: 36px;
+    top: 40px;
     left: 100%;
     -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);

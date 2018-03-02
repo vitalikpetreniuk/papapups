@@ -81,6 +81,8 @@ $(function () {
 
     $('input, select').styler();
 
+    AOS.init({
+        disable: window.innerWidth < 1025
+    });
 
-    AOS.init();
 });
